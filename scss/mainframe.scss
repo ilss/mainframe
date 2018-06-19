@@ -1,0 +1,171 @@
+@import "basic.scss";
+@import "header.scss";
+@import "layout.scss";
+
+.mainframe_action_block{
+    position: relative;
+    display: flex;
+    width: 67.7vw;
+    height: 44vw;
+    margin-top: 1.7vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    // background-color: green;
+}
+.ul_mainframe_action_team_list{
+    position: absolute;
+    &>li{
+        display: inline-block;
+        width: 9vw;
+        background-color: yellow;
+    }
+}
+.mainframe_action_block_question{
+    // position: absolute;
+    $_width_question: 3.85vw;
+    $_maring_border:0.6vw;
+    &>img{
+        position: absolute;
+        width: $_width_question;
+        height: $_width_question;
+        &:first-child:nth-last-child(2),
+        &:first-child:nth-last-child(2) ~ img {
+            left: 50%;
+            margin-left: -$_width_question/2;
+            &:nth-child(1){
+               top: $_maring_border;
+            }
+            &:nth-child(2){
+                bottom: $_maring_border;
+             }
+        }
+        
+        &:first-child:nth-last-child(3),
+        &:first-child:nth-last-child(3) ~ img {
+            &:nth-child(2){
+                float: left;
+            }
+            &:nth-child(3){
+                float: right;
+            }
+        }
+        
+        &:first-child:nth-last-child(4),
+        &:first-child:nth-last-child(4) ~img {
+            &:nth-child(1){
+                left: 50%;
+                margin-left: -$_width_question/2;
+                top:$_maring_border;
+            }
+            &:nth-child(2){
+                top: 50%;
+                margin-top: -$_width_question/2;
+                left:$_maring_border;
+            }
+            &:nth-child(3){
+                left: 50%;
+                margin-left: -$_width_question/2;
+                bottom:$_maring_border;
+            }
+            &:nth-child(4){
+                top: 50%;
+                margin-top: -$_width_question/2;
+                right:$_maring_border;
+            }
+        }
+    }
+}
+.mainframe_action_block_main{
+    text-align: center;
+    width: 44vw; 
+    height: 44vw; 
+    // background-color: #fff;
+    & span.action_mainframe_action_block_main{
+        position: absolute;
+        display: block;
+        background: url(../image/mainframe/action_mainframe_action_block_main.gif) no-repeat center center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-51%);
+    }
+    &>li{
+        position: relative;
+        background: url(../image/mainframe/bg_mainframe_action_block.png) no-repeat center center;
+        box-sizing: border-box;
+        border:2px solid $color_main_blue;
+        border-radius: 34.6vw;
+        margin: auto;
+        text-align: center;
+        &:first-child:nth-last-child(1) {
+            width: 34.6vw;
+            height: 34.6vw;
+            background-size: 34.6vw;
+            margin:4.5vw auto 0;
+            & span.action_mainframe_action_block_main{
+                width: 11.5vw;
+                height: 11.5vw;
+                background-size: 11.5vw;
+            }
+        }
+        
+        &:first-child:nth-last-child(2),
+        &:first-child:nth-last-child(2) ~ li {
+            width: 20.8vw;
+            height: 20.8vw;
+            background-size: 20.8vw;
+            &:nth-child(2){
+                margin-top: 1.7vw;
+            }
+            & span.action_mainframe_action_block_main{
+                width: 6.7vw;
+                height:6.7vw;
+                background-size:6.7vw;
+            }
+        }
+        
+        &:first-child:nth-last-child(3),
+        &:first-child:nth-last-child(3) ~ li {
+            width: 20.8vw;
+            height: 20.8vw;
+            background-size: 20.8vw;
+            &:nth-child(2){
+                float: left;
+            }
+            &:nth-child(3){
+                float: right;
+            }
+            & span.action_mainframe_action_block_main{
+                width: 6.7vw;
+                height:6.7vw;
+                background-size:6.7vw;
+            }
+        }
+        
+        &:first-child:nth-last-child(4),
+        &:first-child:nth-last-child(4) ~ li {
+            width: 20.8vw;
+            height: 20.8vw;
+            background-size: 20.8vw;
+            &:nth-child(1){
+                float: left;
+            }
+            &:nth-child(2){
+                float: right;
+            }
+            &:nth-child(3){
+                float: left;
+                margin-top: 2vw;
+            }
+            &:nth-child(4){
+                float: right;
+                margin-top: 2vw;
+            }
+            & span.action_mainframe_action_block_main{
+                width: 6.7vw;
+                height:6.7vw;
+                background-size:6.7vw;
+            }
+        }
+    }
+}

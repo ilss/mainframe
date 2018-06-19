@@ -1,0 +1,271 @@
+@charset "UTF-8";
+.content {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: url("../image/body_bg.jpg") no-repeat;
+  background-size: 100% 100%; }
+
+.header-warp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url("../image/bg_header.png") no-repeat top center;
+  background-size: 100% 100%; }
+
+.header-logo {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 19.27vw;
+  height: 9.6vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 15.5vw 4.6vh;
+  text-indent: -999px;
+  overflow: hidden; }
+
+.header-title {
+  width: 54vw;
+  height: 9.6vh;
+  font-size: 2.2vw;
+  color: #03f4fb;
+  text-align: center;
+  font-weight: bold;
+  line-height: 10.5vh;
+  overflow: hidden; }
+
+.header-left, .header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 19.27vw;
+  height: 9.6vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  overflow: hidden; }
+
+.header-right {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #03f4fb; }
+
+.header-right > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 0.9vw;
+  line-height: 0.9vw;
+  margin-left: 2vw; }
+  .header-right > li:first-child {
+    margin-bottom: 1vh; }
+
+.header-time-font {
+  text-align: left;
+  margin-right: 1.5vw; }
+
+.header-time {
+  letter-spacing: 1px; }
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.main-left {
+  width: 275px;
+  height: 100%; }
+
+/*中间内容和推送消息*/
+.main-mid {
+  width: calc(100% - 610px);
+  margin-top: 28px; }
+
+.mid-notice {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 958px;
+  height: 51px;
+  margin: 0 auto; }
+
+.mid-notice-cont {
+  position: relative;
+  width: calc(100% - 114px);
+  height: 49px;
+  border: 1px solid #c98f09;
+  color: #ffffff;
+  line-height: 49px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; }
+
+.mid-notice-mask {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  /* Safari 5.1 - 6.0*/
+  /* Firefox 3.6 - 15*/
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.25%, black), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(99.75%, black));
+  background: linear-gradient(90deg, black 0.25%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), black 99.75%);
+  /* 标准的语法 */ }
+
+.mid-menu-left, .mid-menu-right {
+  width: 49px;
+  height: 49px;
+  border: 1px solid #c98f09; }
+
+.mid-menu-left {
+  background: url("../image/mid-menu-left.png") center no-repeat;
+  margin-right: 7px; }
+
+.mid-menu-right {
+  background: url("../image/mid-menu-right.png") center no-repeat;
+  margin-left: 7px; }
+
+.main-right {
+  /*position: relative;*/
+  width: 275px;
+  height: 100%; }
+
+.mainframe_action_block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 67.7vw;
+  height: 44vw;
+  margin-top: 1.7vw;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.ul_mainframe_action_team_list {
+  position: absolute; }
+  .ul_mainframe_action_team_list > li {
+    display: inline-block;
+    width: 9vw;
+    background-color: yellow; }
+
+.mainframe_action_block_question > img {
+  position: absolute;
+  width: 3.85vw;
+  height: 3.85vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(2), .mainframe_action_block_question > img:first-child:nth-last-child(2) ~ img {
+    left: 50%;
+    margin-left: -1.925vw; }
+    .mainframe_action_block_question > img:first-child:nth-last-child(2):nth-child(1), .mainframe_action_block_question > img:first-child:nth-last-child(2) ~ img:nth-child(1) {
+      top: 0.6vw; }
+    .mainframe_action_block_question > img:first-child:nth-last-child(2):nth-child(2), .mainframe_action_block_question > img:first-child:nth-last-child(2) ~ img:nth-child(2) {
+      bottom: 0.6vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(3):nth-child(2), .mainframe_action_block_question > img:first-child:nth-last-child(3) ~ img:nth-child(2) {
+    float: left; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(3):nth-child(3), .mainframe_action_block_question > img:first-child:nth-last-child(3) ~ img:nth-child(3) {
+    float: right; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(4):nth-child(1), .mainframe_action_block_question > img:first-child:nth-last-child(4) ~ img:nth-child(1) {
+    left: 50%;
+    margin-left: -1.925vw;
+    top: 0.6vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(4):nth-child(2), .mainframe_action_block_question > img:first-child:nth-last-child(4) ~ img:nth-child(2) {
+    top: 50%;
+    margin-top: -1.925vw;
+    left: 0.6vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(4):nth-child(3), .mainframe_action_block_question > img:first-child:nth-last-child(4) ~ img:nth-child(3) {
+    left: 50%;
+    margin-left: -1.925vw;
+    bottom: 0.6vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(4):nth-child(4), .mainframe_action_block_question > img:first-child:nth-last-child(4) ~ img:nth-child(4) {
+    top: 50%;
+    margin-top: -1.925vw;
+    right: 0.6vw; }
+
+.mainframe_action_block_main {
+  text-align: center;
+  width: 44vw;
+  height: 44vw; }
+  .mainframe_action_block_main span.action_mainframe_action_block_main {
+    position: absolute;
+    display: block;
+    background: url(../image/mainframe/action_mainframe_action_block_main.gif) no-repeat center center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -51%);
+            transform: translate(-50%, -51%); }
+  .mainframe_action_block_main > li {
+    position: relative;
+    background: url(../image/mainframe/bg_mainframe_action_block.png) no-repeat center center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 2px solid #03f4fb;
+    border-radius: 34.6vw;
+    margin: auto;
+    text-align: center; }
+    .mainframe_action_block_main > li:first-child:nth-last-child(1) {
+      width: 34.6vw;
+      height: 34.6vw;
+      background-size: 34.6vw;
+      margin: 4.5vw auto 0; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(1) span.action_mainframe_action_block_main {
+        width: 11.5vw;
+        height: 11.5vw;
+        background-size: 11.5vw; }
+    .mainframe_action_block_main > li:first-child:nth-last-child(2), .mainframe_action_block_main > li:first-child:nth-last-child(2) ~ li {
+      width: 20.8vw;
+      height: 20.8vw;
+      background-size: 20.8vw; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(2):nth-child(2), .mainframe_action_block_main > li:first-child:nth-last-child(2) ~ li:nth-child(2) {
+        margin-top: 1.7vw; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(2) span.action_mainframe_action_block_main, .mainframe_action_block_main > li:first-child:nth-last-child(2) ~ li span.action_mainframe_action_block_main {
+        width: 6.7vw;
+        height: 6.7vw;
+        background-size: 6.7vw; }
+    .mainframe_action_block_main > li:first-child:nth-last-child(3), .mainframe_action_block_main > li:first-child:nth-last-child(3) ~ li {
+      width: 20.8vw;
+      height: 20.8vw;
+      background-size: 20.8vw; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(3):nth-child(2), .mainframe_action_block_main > li:first-child:nth-last-child(3) ~ li:nth-child(2) {
+        float: left; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(3):nth-child(3), .mainframe_action_block_main > li:first-child:nth-last-child(3) ~ li:nth-child(3) {
+        float: right; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(3) span.action_mainframe_action_block_main, .mainframe_action_block_main > li:first-child:nth-last-child(3) ~ li span.action_mainframe_action_block_main {
+        width: 6.7vw;
+        height: 6.7vw;
+        background-size: 6.7vw; }
+    .mainframe_action_block_main > li:first-child:nth-last-child(4), .mainframe_action_block_main > li:first-child:nth-last-child(4) ~ li {
+      width: 20.8vw;
+      height: 20.8vw;
+      background-size: 20.8vw; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(4):nth-child(1), .mainframe_action_block_main > li:first-child:nth-last-child(4) ~ li:nth-child(1) {
+        float: left; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(4):nth-child(2), .mainframe_action_block_main > li:first-child:nth-last-child(4) ~ li:nth-child(2) {
+        float: right; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(4):nth-child(3), .mainframe_action_block_main > li:first-child:nth-last-child(4) ~ li:nth-child(3) {
+        float: left;
+        margin-top: 2vw; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(4):nth-child(4), .mainframe_action_block_main > li:first-child:nth-last-child(4) ~ li:nth-child(4) {
+        float: right;
+        margin-top: 2vw; }
+      .mainframe_action_block_main > li:first-child:nth-last-child(4) span.action_mainframe_action_block_main, .mainframe_action_block_main > li:first-child:nth-last-child(4) ~ li span.action_mainframe_action_block_main {
+        width: 6.7vw;
+        height: 6.7vw;
+        background-size: 6.7vw; }
