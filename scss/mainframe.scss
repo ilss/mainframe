@@ -15,6 +15,7 @@
 }
 .ul_mainframe_action_team_list{
     position: absolute;
+    display: none;
     &>li{
         display: inline-block;
         width: 9vw;
@@ -43,11 +44,18 @@
         
         &:first-child:nth-last-child(3),
         &:first-child:nth-last-child(3) ~ img {
+            &:nth-child(1){
+                left: 50%;
+                margin-left: -$_width_question/2;
+                top:$_maring_border;
+            }
             &:nth-child(2){
-                float: left;
+                left: 4.2vw;
+                top: 24.5vw;
             }
             &:nth-child(3){
-                float: right;
+                right: 4.2vw;
+                top: 24.5vw;
             }
         }
         
@@ -73,6 +81,31 @@
                 margin-top: -$_width_question/2;
                 right:$_maring_border;
             }
+        }
+
+        &:first-child:nth-last-child(5),
+        &:first-child:nth-last-child(5) ~img {
+            &:nth-child(1){
+                left: 50%;
+                margin-left: -$_width_question/2;
+                top:$_maring_border;
+            }
+            &:nth-child(2){
+               left: 1.45vw;
+               top: 10.8vw;
+            }
+            &:nth-child(3){
+                left: 6.5vw;
+                bottom: 3.9vw;
+            }
+            &:nth-child(4){
+                right: 6.5vw;
+                bottom: 3.9vw;
+            }
+            &:nth-child(5){
+                right: 1.45vw;
+                top: 10.8vw;
+             }
         }
     }
 }

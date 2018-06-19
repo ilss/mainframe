@@ -161,7 +161,8 @@
           align-items: center; }
 
 .ul_mainframe_action_team_list {
-  position: absolute; }
+  position: absolute;
+  display: none; }
   .ul_mainframe_action_team_list > li {
     display: inline-block;
     width: 9vw;
@@ -178,10 +179,16 @@
       top: 0.6vw; }
     .mainframe_action_block_question > img:first-child:nth-last-child(2):nth-child(2), .mainframe_action_block_question > img:first-child:nth-last-child(2) ~ img:nth-child(2) {
       bottom: 0.6vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(3):nth-child(1), .mainframe_action_block_question > img:first-child:nth-last-child(3) ~ img:nth-child(1) {
+    left: 50%;
+    margin-left: -1.925vw;
+    top: 0.6vw; }
   .mainframe_action_block_question > img:first-child:nth-last-child(3):nth-child(2), .mainframe_action_block_question > img:first-child:nth-last-child(3) ~ img:nth-child(2) {
-    float: left; }
+    left: 4.2vw;
+    top: 24.5vw; }
   .mainframe_action_block_question > img:first-child:nth-last-child(3):nth-child(3), .mainframe_action_block_question > img:first-child:nth-last-child(3) ~ img:nth-child(3) {
-    float: right; }
+    right: 4.2vw;
+    top: 24.5vw; }
   .mainframe_action_block_question > img:first-child:nth-last-child(4):nth-child(1), .mainframe_action_block_question > img:first-child:nth-last-child(4) ~ img:nth-child(1) {
     left: 50%;
     margin-left: -1.925vw;
@@ -198,6 +205,22 @@
     top: 50%;
     margin-top: -1.925vw;
     right: 0.6vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(5):nth-child(1), .mainframe_action_block_question > img:first-child:nth-last-child(5) ~ img:nth-child(1) {
+    left: 50%;
+    margin-left: -1.925vw;
+    top: 0.6vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(5):nth-child(2), .mainframe_action_block_question > img:first-child:nth-last-child(5) ~ img:nth-child(2) {
+    left: 1.45vw;
+    top: 10.8vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(5):nth-child(3), .mainframe_action_block_question > img:first-child:nth-last-child(5) ~ img:nth-child(3) {
+    left: 6.5vw;
+    bottom: 3.9vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(5):nth-child(4), .mainframe_action_block_question > img:first-child:nth-last-child(5) ~ img:nth-child(4) {
+    right: 6.5vw;
+    bottom: 3.9vw; }
+  .mainframe_action_block_question > img:first-child:nth-last-child(5):nth-child(5), .mainframe_action_block_question > img:first-child:nth-last-child(5) ~ img:nth-child(5) {
+    right: 1.45vw;
+    top: 10.8vw; }
 
 .mainframe_action_block_main {
   text-align: center;
