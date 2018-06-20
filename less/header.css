@@ -6,21 +6,16 @@
   background-size: 100% 100%;
 }
 .header-warp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100vw;
   height: 10vh;
   overflow: hidden;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background: url("../image/bg_header.png") no-repeat top center;
   background-size: 100% 100%;
 }
 .header-logo {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 19.27vw;
   height: 9.6vh;
   background-position: center center;
@@ -41,26 +36,18 @@
 }
 .header-left,
 .header-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 19.27vw;
   height: 9.6vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   overflow: hidden;
 }
 .header-right {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   color: #03f4fb;
 }
 .header-right > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   font-size: 0.9vw;

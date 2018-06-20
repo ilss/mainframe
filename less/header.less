@@ -1,4 +1,4 @@
-@import "basic.scss";
+@import "basic.less";
 .content{
     position: fixed;
     width: 100vw;
@@ -9,7 +9,7 @@
 .header-warp{
     display: flex;
     width: 100vw;
-    height:  $height_header_content+0.4vh;
+    height:  @height_header_content+0.4;
     overflow: hidden;
     justify-content:space-between;
     background: url("../image/bg_header.png") no-repeat top center;
@@ -18,7 +18,7 @@
 .header-logo{
     flex-wrap: wrap;
     width: 19.27vw;
-    height: $height_header_content;
+    height: @height_header_content;
     background-position: center center;
     background-repeat: no-repeat;
     background-size:15.5vw 4.6vh;
@@ -27,25 +27,25 @@
 }
 .header-title{
     width: 54vw;
-    height:  $height_header_content;
+    height:  @height_header_content;
     font-size: 2.2vw;
-    color:$color_main_blue;
+    color:@color_main_blue;
     text-align: center;
     font-weight: bold;
-    line-height:  $height_header_content+0.9vh;
+    line-height:  @height_header_content+0.9vh;
     overflow: hidden;
 }
 .header-left,.header-right{
     display: flex;
     width: 19.27vw;
-    height:  $height_header_content;
+    height:  @height_header_content;
     justify-content:center;
     align-content:center;
     overflow: hidden;
 }
 .header-right{
     flex-wrap: wrap;
-    color: $color_main_blue;
+    color: @color_main_blue;
 }
 .header-right{
     & >li{

@@ -1,0 +1,68 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main-left {
+  width: 275px;
+  height: 100%;
+}
+/*中间内容和推送消息*/
+.main-mid {
+  margin-top: 28px;
+}
+.mid-notice {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 958px;
+  height: 51px;
+  margin: 0 auto;
+}
+.mid-notice-cont {
+  position: relative;
+  width: calc(-14%);
+  height: 49px;
+  border: 1px solid #c98f09;
+  color: #ffffff;
+  line-height: 49px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.mid-notice-mask {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  /* Safari 5.1 - 6.0*/
+  /* Firefox 3.6 - 15*/
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.25%, #000000), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(99.75%, #000000));
+  background: linear-gradient(90deg, #000000 0.25%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #000000 99.75%);
+  /* 标准的语法 */
+}
+.mid-menu-left,
+.mid-menu-right {
+  width: 49px;
+  height: 49px;
+  border: 1px solid #c98f09;
+}
+.mid-menu-left {
+  background: url("../image/mid-menu-left.png") center no-repeat;
+  margin-right: 7px;
+}
+.mid-menu-right {
+  background: url("../image/mid-menu-right.png") center no-repeat;
+  margin-left: 7px;
+}
+.main-right {
+  /*position: relative;*/
+  width: 275px;
+  height: 100%;
+}

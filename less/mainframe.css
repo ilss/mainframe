@@ -6,26 +6,21 @@
   background-size: 100% 100%;
 }
 .header-warp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100vw;
   height: 10vh;
   overflow: hidden;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background: url("../image/bg_header.png") no-repeat top center;
   background-size: 100% 100%;
 }
 .header-logo {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 19.27vw;
   height: 9.6vh;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 15.5vw 4.6vh;
+  background-size: 15.5vw 4.6;
   text-indent: -999px;
   overflow: hidden;
 }
@@ -41,26 +36,18 @@
 }
 .header-left,
 .header-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 19.27vw;
   height: 9.6vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   overflow: hidden;
 }
 .header-right {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   color: #03f4fb;
 }
 .header-right > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   font-size: 0.9vw;
@@ -78,13 +65,9 @@
   letter-spacing: 1px;
 }
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0 30px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .main-left {
   width: 275px;
@@ -96,8 +79,6 @@
 }
 .mid-notice {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   max-width: 958px;
   height: 51px;
@@ -120,9 +101,10 @@
   width: 100%;
   left: 0;
   top: 0;
+  background: -webkit-linear-gradient(90deg, #000000 0.25%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #000000 99.75%);
   /* Safari 5.1 - 6.0*/
+  background: -moz-linear-gradient(90deg, #000000 0.25%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #000000 99.75%);
   /* Firefox 3.6 - 15*/
-  background: -webkit-gradient(linear, left top, right top, color-stop(0.25%, #000000), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(99.75%, #000000));
   background: linear-gradient(90deg, #000000 0.25%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #000000 99.75%);
   /* 标准的语法 */
 }
@@ -147,19 +129,13 @@
 }
 .mainframe_action_block {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 67.7vw;
   height: 44vw;
   margin-top: 1.7vw;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .ul_mainframe_action_team_list {
   position: absolute;
@@ -168,8 +144,7 @@
 }
 .ul_mainframe_action_team_list > li {
   display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 9vw;
   height: 20%;
   text-align: center;
@@ -300,14 +275,12 @@
   background: url(../image/mainframe/action_mainframe_action_block_main.gif) no-repeat center center;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -51%);
-          transform: translate(-50%, -51%);
+  transform: translate(-50%, -51%);
 }
 .mainframe_action_block_main > li {
   position: relative;
   background: url(../image/mainframe/bg_mainframe_action_block.png) no-repeat center center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 2px solid #03f4fb;
   border-radius: 34.6vw;
   margin: auto;

@@ -1,6 +1,6 @@
-@import "basic.scss";
-@import "header.scss";
-@import "layout.scss";
+@import "basic.less";
+@import "header.less";
+@import "layout.less";
 
 .mainframe_action_block{
     position: relative;
@@ -15,30 +15,64 @@
 }
 .ul_mainframe_action_team_list{
     position: absolute;
-    display: none;
+    width: 100%;
+    height: 100%;
     &>li{
-        display: inline-block;
+        display: block;
+        box-sizing: border-box;
         width: 9vw;
-        background-color: yellow;
+        height: 20%;
+        text-align: center;
+        color: @color_main_blue;
+        font-size: 1vw;
+        padding-top: 30px;
+        &:nth-child(n+6){
+            float: right;
+            clear: right;
+        }
+        &:nth-child(6){
+            margin-top: -44vw;
+        }
+        &:nth-child(7){
+            margin-top: -(44vw*0.8);
+        }
+        &:nth-child(8){
+            margin-top: -(44vw*0.6);
+        }
+        &:nth-child(9){
+            margin-top: -(44vw*0.4);
+        }
+        &:nth-child(10){
+            margin-top: -(44vw*0.2);
+        }
+    }
+    & img{
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        border: 2px solid @color_main_blue;
+        overflow: hidden;
+        margin:5px auto auto;
     }
 }
 .mainframe_action_block_question{
     // position: absolute;
-    $_width_question: 3.85vw;
-    $_maring_border:0.6vw;
+    @_width_question: 3.85vw;
+    @_maring_border:0.6vw;
     &>img{
         position: absolute;
-        width: $_width_question;
-        height: $_width_question;
+        width: @_width_question;
+        height: @_width_question;
         &:first-child:nth-last-child(2),
         &:first-child:nth-last-child(2) ~ img {
             left: 50%;
-            margin-left: -$_width_question/2;
+            margin-left: -5.5%;
             &:nth-child(1){
-               top: $_maring_border;
+               top: @_maring_border;
             }
             &:nth-child(2){
-                bottom: $_maring_border;
+                bottom: @_maring_border;
              }
         }
         
@@ -46,16 +80,16 @@
         &:first-child:nth-last-child(3) ~ img {
             &:nth-child(1){
                 left: 50%;
-                margin-left: -$_width_question/2;
-                top:$_maring_border;
+            margin-left: -5.5%;
+                top:@_maring_border;
             }
             &:nth-child(2){
-                left: 4.2vw;
-                top: 24.5vw;
+                left: 10%;
+                bottom: 21%;
             }
             &:nth-child(3){
-                right: 4.2vw;
-                top: 24.5vw;
+                right: 10%;
+                bottom:21%;
             }
         }
         
@@ -63,23 +97,23 @@
         &:first-child:nth-last-child(4) ~img {
             &:nth-child(1){
                 left: 50%;
-                margin-left: -$_width_question/2;
-                top:$_maring_border;
+                margin-left: -5.5%;
+                top:@_maring_border;
             }
             &:nth-child(2){
                 top: 50%;
-                margin-top: -$_width_question/2;
-                left:$_maring_border;
+                margin-top: -5.5%;
+                left:@_maring_border;
             }
             &:nth-child(3){
                 left: 50%;
-                margin-left: -$_width_question/2;
-                bottom:$_maring_border;
+                margin-left: -5.5%;
+                bottom:@_maring_border;
             }
             &:nth-child(4){
                 top: 50%;
-                margin-top: -$_width_question/2;
-                right:$_maring_border;
+                margin-top: -@_width_question/2;
+                right:@_maring_border;
             }
         }
 
@@ -87,24 +121,24 @@
         &:first-child:nth-last-child(5) ~img {
             &:nth-child(1){
                 left: 50%;
-                margin-left: -$_width_question/2;
-                top:$_maring_border;
+                margin-left: -5.5%;
+                top:@_maring_border;
             }
             &:nth-child(2){
-               left: 1.45vw;
-               top: 10.8vw;
+               left: 5%;
+               top: 31%;
             }
             &:nth-child(3){
-                left: 6.5vw;
-                bottom: 3.9vw;
+                left: 17%;
+                bottom: 13%;
             }
             &:nth-child(4){
-                right: 6.5vw;
-                bottom: 3.9vw;
+                right: 17%;
+                bottom:13%;
             }
             &:nth-child(5){
-                right: 1.45vw;
-                top: 10.8vw;
+                right: 5%;
+                top: 31%;
              }
         }
     }
@@ -113,6 +147,7 @@
     text-align: center;
     width: 44vw; 
     height: 44vw; 
+    
     // background-color: #fff;
     & span.action_mainframe_action_block_main{
         position: absolute;
@@ -126,7 +161,7 @@
         position: relative;
         background: url(../image/mainframe/bg_mainframe_action_block.png) no-repeat center center;
         box-sizing: border-box;
-        border:2px solid $color_main_blue;
+        border:2px solid @color_main_blue;
         border-radius: 34.6vw;
         margin: auto;
         text-align: center;
@@ -147,6 +182,7 @@
             width: 20.8vw;
             height: 20.8vw;
             background-size: 20.8vw;
+            
             &:nth-child(2){
                 margin-top: 1.7vw;
             }
@@ -154,6 +190,10 @@
                 width: 6.7vw;
                 height:6.7vw;
                 background-size:6.7vw;
+            }
+            .mainframe_action_block_question>img{
+                width: 2.1vw;
+                height: 2.1vw;
             }
         }
         
@@ -172,6 +212,10 @@
                 width: 6.7vw;
                 height:6.7vw;
                 background-size:6.7vw;
+            }
+            .mainframe_action_block_question>img{
+                width: 2.1vw;
+                height: 2.1vw;
             }
         }
         
@@ -198,6 +242,10 @@
                 width: 6.7vw;
                 height:6.7vw;
                 background-size:6.7vw;
+            }
+            .mainframe_action_block_question>img{
+                width: 2.1vw;
+                height: 2.1vw;
             }
         }
     }
