@@ -1,68 +1,67 @@
-@import "basic.less";
+@import "base";
 .content{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: url("../image/body_bg.jpg") no-repeat;
-    background-size: 100% 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("../image/body_bg.jpg") no-repeat;
+  background-size: 100% 100%;
 }
 .header-warp{
-    display: flex;
-    width: 100vw;
-    height:  @height_header_content+0.4;
-    overflow: hidden;
-    justify-content:space-between;
-    background: url("../image/bg_header.png") no-repeat top center;
-    background-size: 100% 100%;
-}
-.header-logo{
-    flex-wrap: wrap;
-    width: 19.27vw;
-    height: @height_header_content;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size:15.5vw 4.6vh;
-    text-indent: -999px;
-    overflow: hidden;
-}
-.header-title{
-    width: 54vw;
-    height:  @height_header_content;
-    font-size: 2.2vw;
-    color:@color_main_blue;
-    text-align: center;
-    font-weight: bold;
-    line-height:  @height_header_content+0.9vh;
-    overflow: hidden;
+  display: flex;
+  height: 114/@vh;
+  width: 100%;
+  justify-content:space-between;
 }
 .header-left,.header-right{
-    display: flex;
-    width: 19.27vw;
-    height:  @height_header_content;
-    justify-content:center;
-    align-content:center;
-    overflow: hidden;
+  display: flex;
+  width: 19.27%;
+  min-width: 299/@vw;
+  height: 100.5/@vh;
+  box-shadow:0 1px 0 @mian-color;
+  justify-items: center;
+  align-items: center;
+}
+.header-logo{
+  width: 299/@vw;
+  height: 50/@vh;
+  margin: 0 auto;
+}
+.header-mid{
+  width: 1274/@vw;
+}
+.header-title{
+  height: 100/@vh;
+  width: 100%;
+  margin-top: 12/@vw;
+  background: url("../image/top_bg.png") no-repeat;
+  background-size: 100% 100%;
+  font-size: 36/@vw;
+  color: @mian-color;
+  text-align: center;
+  font-weight: bold;
+  line-height: 91/@vh;
 }
 .header-right{
-    flex-wrap: wrap;
-    color: @color_main_blue;
+  display: flex;
+  min-width: 304/@vw;
+  justify-content:center;
+  align-content:center;
+  flex-wrap:wrap;
+  color: @mian-color;
 }
-.header-right{
-    & >li{
-        display: flex;
-        width: 100%;
-        font-size: 0.9vw;
-        line-height: 0.9vw;
-        margin-left: 2vw;
-        &:first-child{
-            margin-bottom:1vh;
-        }
-    }
+.header-right>li{
+  display: flex;
+  line-height: 1;
+  font-size: 18/@vw;
 }
 .header-time-font{
-    text-align: left;
-    margin-right: 1.5vw;
+  text-align: left;
+  width: 140/@vw;
+  margin-right: 30/@vw;
 }
 .header-time{
-    letter-spacing: 1px;
+  letter-spacing: 1px;
+}
+.header-right li:first-child .header-time-font{
+  margin-bottom: 10/@vh;
 }

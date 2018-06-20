@@ -1,0 +1,189 @@
+@import "base";
+@font-face {
+  font-family: myFont;
+  src: url("../css/font/QUARTZ REGULAR.TTF")
+}
+/*中间部分进度*/
+.mid-content ul{
+  margin-top: 42/@vh;
+}
+.mid-content-list{
+  display: flex;
+  height: 30/@vh;
+  margin: 0 auto 50/@vh auto;
+}
+.mid-content-list:last-child{
+  margin-bottom: 0;
+}
+.content-list-name{
+  display: flex;
+  width: 156/@vw;
+  align-items: center;
+  justify-content:space-between;
+  margin-right: 30/@vw;
+}
+.content-list-name img{
+  width: 29/@vw;
+  height: 29/@vh;
+  border-radius: 50%;
+  border:1px solid @mian-color;
+  margin-right: 5/@vw;
+}
+.content-list-name .team-name{
+  display: block;
+  width:112/@vw;
+  font-size: 14/@vw;
+  color:#03f4fb ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*进度条*/
+.content-list-state{
+  display: flex;
+  align-items: center;
+  width: calc(100% - 191/@vw - 140/@vw);
+  border: 1px solid @mian-color;
+  background: #0d2735;
+}
+.list-state{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.stage{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  width: calc(100% /11);
+  align-items: center;
+  margin:0 auto;
+}
+.stage span{
+  width: calc(100% / 30);
+  height: 14px;
+  background-color: #374b57;
+}
+.stage .answered{
+  background: #03f4fb;
+  box-shadow: rgba(3,244,251,0.7) 0px 0px 1px 1px;
+}
+.content-list-value{
+  display: flex;
+  width: 108/@vw;
+  margin-left: 32/@vw;
+  color: @mian-color;
+  font-size: 20/@vw;
+  line-height: 30/@vh;
+  text-align: right;
+}
+.list-value-num{
+  display: inline-block;
+  font-size: 30/@vw;
+  color: #ffa200;
+  padding-right: 5/@vw;
+}
+.list-value-sum{
+  display: inline-block;
+  vertical-align: baseline;
+}
+.now-time{
+  position: relative;
+  width: 239/@vw;
+  height: 89/@vh;
+  margin-top: -12/@vh;
+  margin-left:-4/@vw;
+  margin-bottom: 40/@vh;
+  background: url("../image/time-border.png") no-repeat;
+  background-size: 100%;
+  text-align: center;
+}
+.now-time span{
+  display: block;
+  font-size: 40/@vw;
+  color: @mian-color;
+  line-height: 1;
+  padding-top:38/@vh;
+}
+/*公告滚动*/
+/*时间*/
+.now-time{
+  position: relative;
+  width: 239/@vw;
+  height: 89/@vh;
+  margin-top: -12/@vh;
+  margin-left:-4/@vw;
+  margin-bottom: 40/@vh;
+  background: url("../image/time-border.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  font-family: myFont !important;
+  text-shadow: 1px 1px 10px #03f4fb, 1px 1px 10px #08dee4,1px 1px 10px #02585a;
+}
+.now-time{
+  font-size: 40/@vw;
+  color: @mian-color;
+  line-height: 1;
+}
+.now-time span{
+  display: inline-block;
+  font-size: 40/@vw;
+  color: @mian-color;
+  line-height: 1;
+  padding-top:38/@vh;
+  vertical-align: text-bottom;
+}
+/*公告历史记录弹窗*/
+.history-mask{
+  position: absolute;
+  width: 344/@vw;
+  height: 575/@vh;
+  top:74/@vh;
+  right: -207/@vw;
+  z-index: 9;
+  background: url("../image/his-bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.history-warp{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.history-title{
+  position: absolute;
+  top: 35/@vh;
+  left: 50/@vw;
+  font-size: 18/@vw;
+  color:@mian-color ;
+  font-weight: bold;
+}
+.history-close{
+  display: block;
+  position: absolute;
+  width: 22/@vw;
+  height: 22/@vh;
+  top: 40/@vh;
+  right: 41/@vw;
+  background: url("../image/close.png") no-repeat;
+  cursor: pointer;
+  background-size: 100% 100%;
+}
+.history-close:hover{
+  background: url("../image/close-hover.png") no-repeat;
+  background-size: 100% 100%;
+}
+.history-cont{
+  position: absolute;
+  top: 94/@vh;
+  left: 26/@vw;
+  width: 303/@vw;
+  height: 440/@vh;
+  color: @mian-color;
+  z-index:22;
+  font-size: 14/@vw;
+}
+//滚动条插件修改
+.my-theme{width: 10/@vw;}
+.mCSB_inside > .mCSB_container{margin-right: 12/@vw;}
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #03f4fb; }
+.mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail{ background-color: #016469; }

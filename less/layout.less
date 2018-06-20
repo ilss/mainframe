@@ -1,59 +1,246 @@
+@import "base";
 .main{
-    display: flex;
-    padding: 0 30px;
-    justify-content:space-between;
+  display: flex;
+  padding: 0 30/@vw;
+  justify-content:space-between;
+}
+.main-name-logo{
+  width:100%;
+  height: 100%;
+  margin-top: 10/@vh;
+  margin-bottom: 14/@vh;
+}
+.main-name-logo img{
+  width:100%;
+  height: 100%;
 }
 .main-left{
-    width: 275px;
-    height: 100%;
+  width: 275/@vw;
+  height: 100%;
+}
+.cont-title{
+  position: relative;
+  width: 275/@vw;
+  height: 20/@vh;
+  background: url("../image/top-left.png") left  top no-repeat,url("../image/top_right.png") right  top no-repeat;
+}
+.cont-title-name{
+  position: absolute;
+  display: block;
+  width: 154/@vw;
+  left: 50%;
+  margin-left: -77/@vw;
+  top:-13/@vh;
+  font-size: 22/@vw;
+  color: @mian-color;
+  text-align: center;
+}
+.cont-th{
+  width: 273/@vw;
+  height: 30/@vh;
+  border-right: 1px solid @tbody-font-color;
+  border-left: 1px solid @tbody-font-color;
+  padding-top: 14/@vh;
+}
+.cont-th>div{
+  display: flex;
+  width: 253/@vw;
+  height: 30/@vh;
+  background: @theader-bg-color;
+  line-height: 30/@vh;
+  padding: 0 10/@vw;
+  justify-content: space-between;
+}
+.cont-th>div span{
+  display: inline-block;
+  font-size: 14/@vw;
+  color:@theader-font-color;
+  font-weight: 700;
+}
+.cont-th>div span:last-child{
+  margin-right: 3/@vw;
+}
+.cont-footer{
+  position: relative;
+  width: 275/@vw;
+  height: 48/@vh;
+  background: url("../image/bottom_right.png") left  bottom no-repeat, url("../image/bottom_left.png") right bottom no-repeat #020a14;
+}
+.cont-footer-bg{
+  width: 100%;
+  height: 48/@vh;
+  border-top:none;
+  background: url("../image/bottom_bg.png") center 5px no-repeat;
+}
+.main-left .cont-content{
+  min-height: 600/@vh;
+}
+.cont-content-warp{
+  position: relative;
+  width:273/@vw;
+}
+.cont-content{
+  width:273/@vw;
+  min-height: 400/@vh;
+  border-right:1px solid @tbody-font-color;
+  border-left:1px solid @tbody-font-color;
+  padding-top:16/@vh;
+}
+.cont-content li{
+  display: flex;
+  width: 273/@vw;
+  height: 34/@vh;
+  justify-content:space-between;
+  background: @theader-bg-color;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 12/@vh;
+}
+.cont-content li:first-child .cont-ground span,.cont-content li:first-child .cont-count{
+  color: @tbody-first-color;
+}
+.cont-content li:first-child .cont-ground img{
+  border-color:@tbody-first-color;
+}
+.cont-content li:nth-child(2) .cont-ground span,.cont-content li:nth-child(2) .cont-count{
+  color: @tbody-second-color;
+}
+.cont-content li:nth-child(2) .cont-ground img{
+  border-color:@tbody-second-color;
+}
+.cont-content li:nth-child(3) .cont-ground span,.cont-content li:nth-child(3) .cont-count{
+  color: @tbody-three-color;
+}
+.cont-content li:nth-child(3) .cont-ground img{
+  border-color:@tbody-three-color;
+}
+.cont-content li:last-child{
+  margin-bottom: 0;
+}
+.cont-rank{
+  width: 28/@vw;
+  height: 28/@vh;
+  margin-left: 17/@vw;
+  line-height: 28/@vh;
+  text-align: center;
+  background: url("../image/left-icon.png");
+  background-size: 100% 100%;
+}
+.cont-rank span{
+  font-size: 14/@vw;
+  color: @tbody-rank-color;
+}
+.cont-ground{
+  display: flex;
+  align-items: center;
+  height: 34/@vh;
+}
+.cont-content .li-rank .cont-rank{
+  width: 32/@vw;
+  height: 32/@vh;
+  margin-left: 15/@vw;
+}
+.cont-content li:first-child .cont-rank{
+  background: url("../image/left-icon1.png") no-repeat;
+  background-size: 100% 100%;
+}
+.cont-content li:nth-child(2) .cont-rank{
+  background: url("../image/left-icon2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.cont-content li:nth-child(3) .cont-rank{
+  background: url("../image/left-icon3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.cont-ground img{
+  width: 27/@vw;
+  height: 27/@vh;
+  border: 1px solid @mian-color;
+  border-radius: 50%;
+  line-height: 0;
+  margin-right: 5/@vw;
+}
+.cont-ground span{
+  display: inline-block;
+  width: 70/@vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: @mian-color;
+  font-size: 14/@vw;
+}
+.cont-count{
+  display: block;
+  margin-right: 25/@vw;
+  color: #03f4fb;
+  font-size: 14/@vh;
+}
+/*右测部分*/
+.main-right{
+  /*position: relative;*/
+  width: 275/@vw;
+  height: 100%;
 }
 /*中间内容和推送消息*/
 .main-mid{
-    margin-top: 28px;
+  width: calc(100% - 610/@vw);
+  margin-top: 28/@vh;
 }
 .mid-notice{
-    position: relative;
-    display: flex;
-    max-width: 958px;
-    height: 51px;
-    margin: 0 auto;
-}
-.mid-notice-cont{
-    position: relative;
-    width: calc(100% - 114px);
-    height: 49px;
-    border: 1px solid #c98f09;
-    color: #ffffff;
-    line-height: 49px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-}
-.mid-notice-mask{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0.25%, rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(0,0,0,1) 99.75%); /* Safari 5.1 - 6.0*/
-    background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0.25%, rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(0,0,0,1) 99.75%); /* Firefox 3.6 - 15*/
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0.25%, rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(0,0,0,1) 99.75%); /* 标准的语法 */
+  position: relative;
+  display: flex;
+  max-width: 958/@vw;
+  height: 51/@vh;
+  margin: 0 auto;
 }
 .mid-menu-left,.mid-menu-right{
-    width: 49px;
-    height: 49px;
-    border:1px solid #c98f09;
+  width: 49/@vw;
+  height: 49/@vh;
+  border:1px solid #c98f09;
 }
 .mid-menu-left{
-    background: url("../image/mid-menu-left.png") center no-repeat;
-    margin-right: 7px;
+  background: url("../image/mid-menu-left.png") center no-repeat;
+  margin-right: 7/@vw;
 }
 .mid-menu-right{
-    background: url("../image/mid-menu-right.png") center no-repeat;
-    margin-left: 7px;
+  background: url("../image/mid-menu-right.png") center no-repeat;
+  margin-left: 7/@vw;
 }
-.main-right{
-    /*position: relative;*/
-    width: 275px;
-    height: 100%;
+.mid-notice-cont{
+  position: relative;
+  width: calc(100% - 114/@vw);
+  height: 49/@vh;
+  border: 1px solid #c98f09;
+  color: #ffffff;
+  line-height: 49/@vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.mid-notice-cont-Warp{
+  height: 49/@vh;
+  line-height: 49/@vh;
+}
+.mid-notice-cont-Warp>span{
+  display: inline-block;
+  margin-right: 20/@vw;
+}
+.mid-notice-mask{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0.25%, rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(0,0,0,1) 99.75%); /* Safari 5.1 - 6.0*/
+  background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0.25%, rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(0,0,0,1) 99.75%); /* Firefox 3.6 - 15*/
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0.25%, rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(0,0,0,1) 99.75%); /* 标准的语法 */
+}
+//滚动插件调整
+.mid-notice-cont .str_move {
+  height: 49/@vh;
+  line-height: 49/@vh;
+  font-size: 16/@vw;
+}
+.mid-notice-cont .str_move>span{
+  padding-right: 30/@vw;
 }

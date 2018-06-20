@@ -1,6 +1,6 @@
-@import "basic.less";
-@import "header.less";
-@import "layout.less";
+@import "base";
+@import "header";
+@import "layout";
 
 .mainframe_action_block{
     position: relative;
@@ -23,12 +23,12 @@
         width: 9vw;
         height: 20%;
         text-align: center;
-        color: @color_main_blue;
+        color: @mian-color;
         font-size: 1vw;
         padding-top: 30px;
         &:nth-child(n+6){
             float: right;
-            clear: right;
+            // clear: right;
         }
         &:nth-child(6){
             margin-top: -44vw;
@@ -51,15 +51,17 @@
         width: 40px;
         height: 40px;
         border-radius: 40px;
-        border: 2px solid @color_main_blue;
+        border: 2px solid @mian-color;
         overflow: hidden;
         margin:5px auto auto;
     }
 }
 .mainframe_action_block_question{
-    // position: absolute;
     @_width_question: 3.85vw;
     @_maring_border:0.6vw;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     &>img{
         position: absolute;
         width: @_width_question;
@@ -161,7 +163,7 @@
         position: relative;
         background: url(../image/mainframe/bg_mainframe_action_block.png) no-repeat center center;
         box-sizing: border-box;
-        border:2px solid @color_main_blue;
+        border:2px solid @mian-color;
         border-radius: 34.6vw;
         margin: auto;
         text-align: center;
@@ -249,4 +251,16 @@
             }
         }
     }
+}
+.action_mainframe_attack_linghting_area{
+    position: absolute;
+    border:1px solid red;
+    overflow: hidden;
+}
+.action_mainframe_attack_linghting{
+    position: absolute;
+    background: url(../image/mainframe/action_mainframe_attack_linghting.png) repeat-x;
+    display: block;
+    width: 0;
+    height: 30/@vw;
 }
