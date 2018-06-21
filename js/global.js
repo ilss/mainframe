@@ -48,13 +48,31 @@
                     _at = 180 - Math.abs(_at);
             }
             _at -= 90;
-            return Math.round(_at);
+            return _at;
         },
         distanceToActionTime: function (pos1, pos2, move_speed) {
             return cc.pDistance(pos1, pos2) / move_speed;
         },
         isArray: function (obj) {
             return Object.prototype.toString.call(obj) === '[object Array]';
+        },
+        /**
+        * @desc 计算两个坐标的连线距离
+        * @param {object} pos1 {x:20,y:20}
+        * @param {object} pos2
+        * @returns {number}
+        */
+        twoPosDistance: function (pos1, pos2) {
+            var _w = Math.abs(pos1.x - pos2.x),
+                _h = Math.abs(pos1.y - pos2.y);
+            return Math.sqrt(_w * _w + _h * _h);
+        },
+        preloadImg (arr) {
+            var _imgWrap = [];
+            for (var i = 0; i < arr.length; i++) {
+                _imgWrap[i] = new Image();
+                _imgWrap[i].src = arr[i];
+            }
         }
     }
 }(window));
