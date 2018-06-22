@@ -1,4 +1,4 @@
-// Less project settings, you can edit it and set custom settings.
+// Default project settings, you can edit it and set custom settings.
 {
 	// The mappings of source directory and output directory
 	"mappings": [
@@ -13,26 +13,12 @@
 		"*.css",
 		"*.js"
 	],
-	// Compile options of LESS.
+	// Options of Compilers.
 	"options": {
-		// Output style. Can be normal (default), compress.
-		"outputStyle": "normal",
-		// Outputs filename and line numbers, which will output the debug info within comments.
-		"lineComments": false,
-		// Outputs filename and line numbers, which will output the information within a fake media query which is compatible with the SASS format.
-		"debugInfo": false,
-		"strictMath": false,
-		"strictUnits": false,
-		// Create sourcemap files next to the generated CSS files
-		"sourceMap": false,
-		// auto add vendor prefixes to rules
-		"autoprefix": true,
-		"autoprefixConfig": "> 1%, last 2 versions, Firefox ESR, Opera 12.1"
+		// "key": "val",
+		// "key2": "val2"
+		// ...
 	},
-	// Other compile options.
-	// e.g, ["--strict-imports", ... ,"--rootpath=URL"].
-	// Run the command 'lessc -h' to see more options.
-	"customOptions": [],
-	// An array of filesystem paths or importers which should be searched for LESS templates imported with the @import directive.
+	// An array of filesystem paths which should be searched for js/LESS/Sass templates imported with the @import/@append/@prepend directive.
 	"includePaths": []
 }

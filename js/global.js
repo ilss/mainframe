@@ -73,6 +73,9 @@
                 _imgWrap[i] = new Image();
                 _imgWrap[i].src = arr[i];
             }
+        },
+        px2vw: function (px, resolution) {
+            return (px / resolution * 100);
         }
     }
 }(window));
