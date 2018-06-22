@@ -168,7 +168,7 @@ $(function () {
                 }, 1500);
                 _html_span.velocity(
                     {
-                        rotateZ: "359deg"
+                        rotateZ: "720deg"
                     },
                     {
                         duration: 1000
