@@ -15,6 +15,8 @@ $(function () {
             _action_team_block_class: 'mainframe_action_block_main',
             _action_team_icon_dom_img_key: 'data-team-id',
             _action_topic_dom_li_key: 'data-topic-id',
+            _add_score_txt_color: 'yellow',
+            _add_score_txt_size: 24,
             _team_icon_size: 40,
             _team_num: 10
         },
@@ -114,7 +116,7 @@ $(function () {
                 MAINFRAME.levelEffect(data.group_id, _level, data.score_gained);
             }, 2000);
         },
-        levelEffect: function (team, level, score) {
+        levelEffect: function (team_id, level, score) {
             var _topic_li = level.parent().parent(),
                 _pos_html_top = level.offset().top - _topic_li.offset().top + level.height() / 2,
                 _pos_html_left = level.offset().left - _topic_li.offset().left + level.width() / 2,
@@ -155,7 +157,7 @@ $(function () {
 
                 _html_span.append(_img_green);
                 _topic_li.append(_html_span);
-
+                MAINFRAME.teamAddScoreEffect(team_id, score);
                 _html_span.addClass("animated zoomIn");
                 setTimeout(function () {
                     _img_green.addClass("animated fadeOut");
@@ -182,14 +184,52 @@ $(function () {
                 setTimeout(function () { _html_span.remove(); }, 3000);
             } else {
                 //未击中
-                MAINFRAME.teamAddScoreEffect(team, score);
+                MAINFRAME.teamAddScoreEffect(team_id, score);
             }
         },
         teamAddScoreEffect: function (team_id, score) {
             var _team = this.getTeamById(team_id).parent(),
                 _img = $('<img>');
             if (score > 0) {
-                var _txt = score
+                var _dom_p = $('<p>').css({
+                    "position": "absolute",
+                    "width": GLOBAL_FUNC_SIMPLEEDU.px2vw(136, 1920) + 'vw',
+                    "height": GLOBAL_FUNC_SIMPLEEDU.px2vw(136, 1920) / 2 + 'vw',
+                    "overflow": "hidden",
+                    "left": "50%",
+                    "top": "-10%",
+                    "color": this._options._add_score_txt_color,
+                    "textAlign": "center",
+                    "lineHeight": GLOBAL_FUNC_SIMPLEEDU.px2vw(136, 1920) / 2 + 'vw',
+                    "fontSize": GLOBAL_FUNC_SIMPLEEDU.px2vw(this._options._add_score_txt_size, 1920) + 'vw',
+                    "fontWeight": "bold",
+                    "marginLeft": "-" + GLOBAL_FUNC_SIMPLEEDU.px2vw(136, 1920) / 2 + 'vw'
+                }).text('+' + score);
+                _img.attr('src', 'image/mainframe/action_mainframe_add_score.png').css({
+                    "position": "absolute",
+                    "width": GLOBAL_FUNC_SIMPLEEDU.px2vw(136, 1920) + 'vw',
+                    "height": GLOBAL_FUNC_SIMPLEEDU.px2vw(136, 1920) + 'vw',
+                    "border": "none",
+                    "borderRadius": "0",
+                    "top": 0
+                });
+                _dom_p.append(_img);
+                _team.append(_dom_p);
+                _dom_p.addClass('animated fadeIn');
+                _img.velocity(
+                    {
+                        rotateZ: "720deg"
+                    },
+                    {
+                        duration: 4000
+                    }
+                );
+                setTimeout(function () {
+                    _dom_p.addClass('animated fadeOut');
+                }, 2000);
+                setTimeout(function () {
+                    _img.remove();
+                }, 3000);
             } else {
                 _img.attr('src', 'image/mainframe/mainframe_action_miss.png')
                     .css({
@@ -208,6 +248,9 @@ $(function () {
                 setTimeout(function () {
                     _img.addClass('fadeOutDown');
                 }, 2000);
+                setTimeout(function () {
+                    _img.remove();
+                }, 3000);
             }
         }
     };
