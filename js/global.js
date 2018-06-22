@@ -1,10 +1,12 @@
-(function (window) {
-    window["GLOBAL_FUNC_SIMPLEEDU"] = {
+(function () {
+    window.GLOBAL_FUNC_SIMPLEEDU = window.GLOBAL_FUNC_SIMPLEEDU || {};
+
+    $.extend(window.GLOBAL_FUNC_SIMPLEEDU, {
         /**
          * @desc    判断对象自身是否包含某些属性
          * @param {object} obj
          * @param {array} arg_array
-         * @returns
+         * @returns {boolean}}
          */
         objHasSomeProperty: function (obj, arg_array) {
             if (obj !== undefined && obj instanceof Object) {
@@ -24,7 +26,7 @@
          * @param {string} obj_key  目标对象的key
          * @param {array} array    对象数组
          * @param {string} array_key    数组里对象对应的key
-         * @returns 存在的对象下标  不存在返回-1
+         * @returns {number} 存在的对象下标  不存在返回-1
          */
         findObjFromArray: function (obj, obj_key, array, array_key) {
             return array.findIndex(function (item) {
@@ -35,7 +37,7 @@
          * @desc    计算两点角度
          * @param {object} pos1     cc.p(x,y)
          * @param {object} pos2     cc.p(x,y)
-         * @returns     两点的角度
+         * @returns {number}    两点的角度
          */
         getRotate: function (pos1, pos2) {
             var o = pos1.x - pos2.x,
@@ -67,15 +69,25 @@
                 _h = Math.abs(pos1.y - pos2.y);
             return Math.sqrt(_w * _w + _h * _h);
         },
-        preloadImg (arr) {
+        /**
+         * @desc 图片预加载
+         * @param {*} arr
+         */
+        preloadImg: function (arr) {
             var _imgWrap = [];
             for (var i = 0; i < arr.length; i++) {
                 _imgWrap[i] = new Image();
                 _imgWrap[i].src = arr[i];
             }
         },
+        /**
+         * @desc px 转 vw 或 vh
+         * @param {number} px   像素
+         * @param {number} resolution   设计分辨率
+         * @returns {number}
+         */
         px2vw: function (px, resolution) {
             return (px / resolution * 100);
         }
-    }
-}(window));
+    });
+}());

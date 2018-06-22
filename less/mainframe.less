@@ -17,6 +17,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin: 4vh 0 0;
     // background-color: green;
 }
 .ul_mainframe_action_team_list{
@@ -34,7 +35,6 @@
         padding-top: 30/@vw;
         &:nth-child(n+6){
             float: right;
-            // clear: right;
         }
         &:nth-child(6){
             margin-top: -44vw;
@@ -134,7 +134,7 @@
                 top:@_maring_border;
             }
             &:nth-child(2){
-               left: 5%;
+               left: 4%;
                top: 31%;
             }
             &:nth-child(3){
@@ -146,7 +146,7 @@
                 bottom:13%;
             }
             &:nth-child(5){
-                right: 5%;
+                right: 4%;
                 top: 31%;
              }
         }
@@ -156,7 +156,6 @@
     text-align: center;
     width: 44vw; 
     height: 44vw; 
-    
     // background-color: #fff;
     & span.action_mainframe_action_block_main{
         position: absolute;
@@ -259,29 +258,31 @@
         }
     }
 }
+@_height_action_mainframe_attack_linghting:30/@vw;
 .action_mainframe_attack_linghting_area{
-    position: relative;
+    position: absolute;
     display: block;
     // background-color: red;
-    height: 30/@vw;
+    height: @_height_action_mainframe_attack_linghting;
     overflow: hidden;
     text-align: left;
     padding: 0;
-    margin: -36/@vw 0 0 47%;
     z-index: 9999;
     transform-origin: 0% 50%;
+    bottom: 100/@vw - @_height_action_mainframe_attack_linghting;
+    left: 47%;
 }
 .action_mainframe_attack_linghting{
     position: absolute;
     display: block;
     width: (274*3+240)/@vw;
-    height: 30/@vw;
+    height: @_height_action_mainframe_attack_linghting;
     top: 0;
     left: (-240-274*3)/@vw;
     &>img{
         float: left;
         width: 274/@vw;
-        height: 30/@vw;
+        height: @_height_action_mainframe_attack_linghting;
         border: none;
         margin: 0 0 0 80/@vw;
         padding: 0;
