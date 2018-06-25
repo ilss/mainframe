@@ -5,7 +5,7 @@
  * @LastEditTime: 2018-06-22 18:28:41
  * @Description: 主机渗透动画区域
  */
-$(function () {
+$(function (window) {
     window.MAINFRAME = window.MAINFRAME || {};
     // 图片预加载
     MAINFRAME._array_preload_img = {
@@ -99,6 +99,7 @@ $(function () {
             }
 
             if (_level.length < 1) {
+                console.log('大题' + data.topic_id + ' 的小题 ' + data.level_id + '不存在');
                 return;
             }
             if (this.getTeamById(data.group_id).length > 0) {
@@ -304,75 +305,4 @@ $(function () {
             }
         }
     });
-
-
-    var _qusetion_json = [
-        {
-            topic_id: 0001,
-            'levels': [
-                1, 2, 3, 4, 5 // 小题id
-            ]
-        },
-        {
-            topic_id: 0002,
-            'levels': [
-                1, 2, 3, 4, 5 // 小题id
-            ]
-        },
-        {
-            topic_id: 0003,
-            'levels': [
-                1, 2, 3, 4, 5 // 小题id
-            ]
-        },
-        {
-            topic_id: 0004,
-            'levels': [
-                1, 2, 3, 4, 5 // 小题id
-            ]
-        }
-    ];
-    MAINFRAME.initQuestion(_qusetion_json).initTeam();
-
-    var activity = {
-        'group_id': 1, // 团队id
-        'group_name': '赵信团队1', // 团队名称
-        'group_icon': 'image/mainframe/34234.jpg', // 团队头像
-        'topic_id': 2, // 被攻击的大题id
-        'level_id': 4, // 被攻击的小题id
-        'score_gained': 20 // 得分
-    };
-    // MAINFRAME.teamAttack(activity);
-    activity = {
-        'group_id': 2, // 团队id
-        'group_name': '赵信团队2', // 团队名称
-        'group_icon': 'image/mainframe/34234.jpg', // 团队头像
-        'topic_id': 1, // 被攻击的大题id
-        'level_id': 2, // 被攻击的小题id
-        'score_gained': 0 // 得分
-    };
-    // MAINFRAME.teamAttack(activity);
-    activity = {
-        'group_id': 3, // 团队id
-        'group_name': '赵信团队3', // 团队名称
-        'group_icon': 'image/mainframe/34234.jpg', // 团队头像
-        'topic_id': 2, // 被攻击的大题id
-        'level_id': 4, // 被攻击的小题id
-        'score_gained': 20 // 得分
-    };
-    // MAINFRAME.teamAttack(activity);
-
-
-    $('#ul_mainframe_action_team_list').css({ "cursor": "pointer" }).delegate('img', 'click', function () {
-        activity = {
-            'group_id': $(this).attr("data-team-id"), // 团队id
-            'group_name': '赵信团队2', // 团队名称
-            'group_icon': 'image/mainframe/34234.jpg', // 团队头像
-            'topic_id': 1, // 被攻击的大题id
-            'level_id': 1, // 被攻击的小题id
-            'score_gained': 20 // 得分
-        };
-        MAINFRAME.teamAttack(activity);
-        event.stopPropagation();
-    });
-});
+}((window)));

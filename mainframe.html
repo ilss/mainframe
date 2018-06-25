@@ -403,6 +403,63 @@
             </div>
         </div>
     </div>
+    <script>
+        var _qusetion_json = [
+            {
+                topic_id: 0001,
+                'levels': [
+                    1, 2, // 小题id
+                ]
+            },
+            {
+                topic_id: 0002,
+                'levels': [
+                    1, 2, 3, 4, 5 // 小题id
+                ]
+            },
+            {
+                topic_id: 0003,
+                'levels': [
+                    1, 2, 3, 4, 5 // 小题id
+                ]
+            },
+            {
+                topic_id: 0004,
+                'levels': [
+                    1, 2, 3, 4, 5 // 小题id
+                ]
+            }
+        ];
+        MAINFRAME.initTeam().initQuestion(_qusetion_json);
+
+        var activity = {
+            'group_id': 1, // 团队id
+            'group_name': '赵信团队1', // 团队名称
+            'group_icon': 'image/mainframe/34234.jpg', // 团队头像
+            'topic_id': 2, // 被攻击的大题id
+            'level_id': 4, // 被攻击的小题id
+            'score_gained': 20 // 得分
+        };
+        // MAINFRAME.teamAttack(activity);
+        activity = {
+            'group_id': 2, // 团队id
+            'group_name': '赵信团队2', // 团队名称
+            'group_icon': 'image/mainframe/34234.jpg', // 团队头像
+            'topic_id': 1, // 被攻击的大题id
+            'level_id': 2, // 被攻击的小题id
+            'score_gained': 0 // 得分
+        };
+        // MAINFRAME.teamAttack(activity);
+        activity = {
+            'group_id': 3, // 团队id
+            'group_name': '赵信团队3', // 团队名称
+            'group_icon': 'image/mainframe/34234.jpg', // 团队头像
+            'topic_id': 2, // 被攻击的大题id
+            'level_id': 4, // 被攻击的小题id
+            'score_gained': 20 // 得分
+        };
+    // MAINFRAME.teamAttack(activity);
+    </script>
 </body>
 
 </html>
